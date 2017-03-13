@@ -1,0 +1,173 @@
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="hacs.whs.com.seniorassassin.DashboardFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/dashboard_safety_card"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="@string/safety_item_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/safety_title_text"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:text="John Broderick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/safety_item_text"
+                        android:textAlignment="center"
+                        android:paddingTop="10dp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/dashboard_time_card"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="@string/time_left_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/time_left_time"
+                            android:textAlignment="center"
+                            android:paddingTop="5dp"
+                            android:text="2:00 AM"
+                            android:layout_weight="1"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView5"
+                            android:textAlignment="center"
+                            android:paddingTop="5dp"
+                            android:text="@string/on"
+                            android:layout_weight="1"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="March 11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/time_left_date"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:paddingTop="5dp" />
+                    </LinearLayout>
+
+                    <!-- TODO: Possibly use military time for an extra special vibe -->
+
+                    <TextView
+                        android:text="@string/time_left_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        android:textAlignment="center"
+                        android:paddingTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/dashboard_announcements_card"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                app:contentPadding="0dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/announcements_layout"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:text="@string/announcements_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/announcements_title_text"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:text="Get your permission slips in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/main_announcement"
+                        android:textAlignment="center"
+                        android:paddingTop="10dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/Seperator"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/announcements_seperator" />
+
+                    <ToggleButton
+                        android:text="Show More"
+                        android:layout_width="match_parent"
+                        android:id="@+id/accouncements_show_more"
+                        style="?attr/buttonBarButtonStyle"
+                        android:textColor="?android:attr/textColorTertiary"
+                        android:textOff="@string/show_more_caps"
+                        android:textOn="@string/show_less_caps"
+                        android:textSize="12sp"
+                        android:gravity="center_horizontal"
+                        android:elevation="0dp"
+                        android:checked="false"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
